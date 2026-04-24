@@ -10,17 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Descargar codigo del repo
+      - 
+        name: Descargar codigo del repo
         uses: actions/checkout@v4
 
-      - name: Iniciar sesion en docker
+      - 
+        name: Iniciar sesion en docker
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
 
-      - name: construir y Publicar
+      - 
+        name: construir y Publicar
         uses: docker/build-push-action@v6
         with:
           context: .

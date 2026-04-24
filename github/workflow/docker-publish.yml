@@ -1,0 +1,9 @@
+name: Publicar imagen docker
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
